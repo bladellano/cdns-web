@@ -63,8 +63,14 @@
 
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="w-full h-1.5 bg-gray-200">
+            <div id="progressBar" class="h-full bg-orange-600" style="width: 0%;"></div>
+        </div>
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-poppins font-bold text-xl text-gray-800">CDNS Systems</div>
+            <div class="flex items-center space-x-2">
+                <img src="images/cdns-logo.png" alt="CDNS Systems Logo" class="h-8">
+                <span class="font-bold text-gray-800 text-lg">CDNS Systems</span>
+            </div>
             <ul class="flex space-x-6">
                 <li><a href="#home" class="text-gray-600 hover:text-blue-500 transition duration-300">Início</a></li>
                 <li><a href="#sobre" class="text-gray-600 hover:text-blue-500 transition duration-300">Sobre</a></li>
@@ -263,6 +269,16 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Reading Progress Bar
+        window.addEventListener('scroll', () => {
+            const progressBar = document.getElementById('progressBar');
+            if (progressBar) {
+                const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const progress = (window.scrollY / totalHeight) * 100;
+                progressBar.style.width = progress + '%';
+            }
         });
 
         // O código do formulário de contato foi removido pois agora é gerenciado por um serviço externo.
