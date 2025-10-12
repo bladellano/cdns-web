@@ -45,6 +45,13 @@
         .font-poppins {
             font-family: 'Poppins', sans-serif;
         }
+        #typing-subtitle::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -74,7 +81,7 @@
         <div class="container mx-auto px-6 text-center relative z-10">
             <img src="images/perfil-home.png" alt="Foto do Desenvolvedor" class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-white shadow-lg">
             <h1 class="text-4xl font-bold font-poppins text-white">CDNS Systems Ltda</h1>
-            <p class="text-xl text-blue-300 mt-2">Desenvolvedor Web – Drupal, Laravel & Front-end</p>
+            <p id="typing-subtitle" class="text-xl text-blue-300 mt-2 h-7"></p>
             <p class="mt-4 max-w-2xl mx-auto text-gray-200">
                 Criando soluções web robustas e elegantes, com foco em performance e na experiência do usuário.
             </p>
@@ -307,6 +314,48 @@
                 
                 // Initial setup
                 updateCarousel();
+            }
+        });
+    </script>
+
+</body>
+</html>
+<script>
+        // Typing effect for subtitle
+        document.addEventListener('DOMContentLoaded', () => {
+            const subtitleElement = document.getElementById('typing-subtitle');
+
+            if (subtitleElement) {
+                
+                const text = "Desenvolvedor Web – Drupal, Laravel & Front-end";
+                let charIndex = 0;
+                let isDeleting = false;
+                const typeSpeed = 100;
+                const deleteSpeed = 50;
+                const delayAfterTyping = 2000;
+
+                function typeEffect() {
+                    if (isDeleting) {
+                        if (charIndex > 0) {
+                            subtitleElement.textContent = text.substring(0, charIndex - 1);
+                            charIndex--;
+                            setTimeout(typeEffect, deleteSpeed);
+                        } else {
+                            isDeleting = false;
+                            setTimeout(typeEffect, 500);
+                        }
+                    } else {
+                        if (charIndex < text.length) {
+                            subtitleElement.textContent = text.substring(0, charIndex + 1);
+                            charIndex++;
+                            setTimeout(typeEffect, typeSpeed);
+                        } else {
+                            isDeleting = true;
+                            setTimeout(typeEffect, delayAfterTyping);
+                        }
+                    }
+                }
+                typeEffect();
             }
         });
     </script>
