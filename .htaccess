@@ -1,0 +1,49 @@
+# .htaccess SEGURO E FUNCIONAL para cdnssystems.com.br
+# Proteções essenciais sem quebrar o site
+
+# 1. PROTEGER ARQUIVO .env (CRÍTICO)
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# 2. PROTEGER OUTROS ARQUIVOS SENSÍVEIS
+<FilesMatch "^(composer\.(json|lock)|\.gitignore|\.git)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 3. PROTEGER DIRETÓRIO DE LOGS
+<DirectoryMatch "logs">
+    Order allow,deny
+    Deny from all
+</DirectoryMatch>
+
+# 4. PREVENIR LISTAGEM DE DIRETÓRIOS
+Options -Indexes
+
+# 5. ROTEAMENTO DO FLIGHT PHP
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Se o arquivo ou diretório existe, serve diretamente
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    # Caso contrário, roteia para index.php
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+
+# 6. SEGURANÇA ADICIONAL (Headers básicos)
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# 7. DESABILITAR ASSINATURA DO SERVIDOR
+ServerSignature Off
+
+# 8. LIMITAR TAMANHO DE UPLOAD (10MB)
+LimitRequestBody 10485760

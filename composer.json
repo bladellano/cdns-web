@@ -1,0 +1,23 @@
+{
+    "name": "cdnssystems/site",
+    "description": "CDNS Systems Ltda Website",
+    "type": "project",
+    "require": {
+        "php": ">=8.2",
+        "flightphp/core": "^3.0",
+        "vlucas/phpdotenv": "^5.5",
+        "phpmailer/phpmailer": "^6.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "CDNS\\Site\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Caio",
+            "email": "bladellano@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}

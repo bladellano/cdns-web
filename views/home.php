@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
-
+<html lang="<?php echo isset($currentLang) ? $currentLang : 'pt-BR'; ?>">
 <head>
 
     <!-- Google Tag Manager -->
@@ -24,236 +23,40 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="Desenvolvedor Web especializado em Drupal, Laravel e Front-end. Criando soluções web robustas e elegantes, com foco em performance e na experiência do usuário.">
-    <meta name="keywords"
-        content="Desenvolvimento Web, Drupal, Laravel, Front-end, PHP, JavaScript, CSS, HTML, CDNS Systems">
+    <meta name="description" content="Desenvolvedor Web especializado em Drupal, Laravel e Front-end. Criando soluções web robustas e elegantes, com foco em performance e na experiência do usuário.">
+    <meta name="keywords" content="Desenvolvimento Web, Drupal, Laravel, Front-end, PHP, JavaScript, CSS, HTML, CDNS Systems">
     <meta name="author" content="CDNS Systems Ltda">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.cdnssystems.com.br/"> <!-- Substitua pela URL final do seu site -->
+    <meta property="og:url" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>">
     <meta property="og:title" content="CDNS Systems Ltda – Desenvolvimento Web">
-    <meta property="og:description"
-        content="Soluções web robustas e elegantes, com foco em performance e na experiência do usuário.">
-    <meta property="og:image" content="https://www.cdnssystems.com.br/images/banner-hero.png">
-    <!-- Substitua pela URL absoluta da sua imagem -->
+    <meta property="og:description" content="Soluções web robustas e elegantes, com foco em performance e na experiência do usuário.">
+    <meta property="og:image" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]/images/banner-hero.png"; ?>">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.cdnssystems.com.br/">
-    <!-- Substitua pela URL final do seu site -->
-    <meta property="twitter:title" content="CDNS Systems Ltda – Desenvolvimento Web">
-    <meta property="twitter:description"
-        content="Soluções web robustas e elegantes, com foco em performance e na experiência do usuário.">
-    <meta property="twitter:image" content="https://www.cdnssystems.com.br/images/banner-hero.png">
-    <!-- Substitua pela URL absoluta da sua imagem -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>">
+    <meta name="twitter:title" content="CDNS Systems Ltda – Desenvolvimento Web">
+    <meta name="twitter:description" content="Soluções web robustas e elegantes, com foco em performance e na experiência do usuário.">
+    <meta name="twitter:image" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]/images/banner-hero.png"; ?>">
 
     <title>Desenvolvedor Web – Drupal, Laravel e Front-end</title>
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
-        .font-poppins {
-            font-family: 'Poppins', sans-serif;
-        }
+    <link rel="stylesheet" href="css/style.css">
 
-        #typing-subtitle::after {
-            content: '|';
-            animation: blink 1s infinite;
-        }
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-        @keyframes blink {
-            50% { opacity: 0; }
-        }
-
-        /* =================================================================== */
-        /* RESPONSIVE MENU STYLES */
-        /* =================================================================== */
-
-        /* Mobile hamburger menu button */
-        .mobile-menu-btn {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            padding: 4px;
-        }
-
-        .mobile-menu-btn span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: #374151;
-            margin: 3px 0;
-            transition: 0.3s;
-        }
-
-        /* Mobile menu overlay */
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 9999;
-            padding-top: 60px;
-        }
-
-        .mobile-menu.active {
-            display: block;
-        }
-
-        .mobile-menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
-
-        .mobile-menu li {
-            margin: 20px 0;
-        }
-
-        .mobile-menu a {
-            color: white;
-            font-size: 1.5rem;
-            text-decoration: none;
-            display: block;
-            padding: 15px;
-            transition: color 0.3s;
-        }
-
-        .mobile-menu a:hover {
-            color: #ea580c;
-        }
-
-        .mobile-menu-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-        }
-
-        /* =================================================================== */
-        /* BREAKPOINTS */
-        /* =================================================================== */
-
-        /* TABLET BREAKPOINT: 768px - 1023px */
-        @media (max-width: 1023px) and (min-width: 768px) {
-            /* Hide desktop menu and show mobile menu for tablet */
-            .desktop-menu {
-                display: none !important;
-            }
-
-            /* Show mobile menu button for tablet */
-            .mobile-menu-btn {
-                display: flex !important;
-            }
-
-            /* Hide Banner Component Unicorn for tablet */
-            .unicorn-banner {
-                display: none !important;
-            }
-            
-            /* Adjust hero section background for tablet */
-            #home {
-                background: #000 !important;
-            }
-
-            /* Adjust header padding for tablet */
-            nav {
-                padding: 1rem 1.5rem;
-            }
-
-            /* Text justify for "Sobre" section on tablet */
-            #sobre p {
-                text-align: justify;
-            }
-        }
-
-        /* MOBILE BREAKPOINT: up to 767px */
-        @media (max-width: 767px) {
-            /* Hide desktop menu */
-            .desktop-menu {
-                display: none !important;
-            }
-
-            /* Show mobile menu button */
-            .mobile-menu-btn {
-                display: flex !important;
-            }
-
-            /* Adjust header padding for mobile */
-            nav {
-                padding: 1rem 1.5rem;
-            }
-
-            /* Hide Banner Component Unicorn for mobile */
-            .unicorn-banner {
-                display: none !important;
-            }
-
-            /* Adjust hero section for mobile */
-            #home {
-                background: #000 !important;
-                padding: 3rem 0;
-            }
-
-            /* Adjust hero content for mobile */
-            #home .container {
-                padding: 0 1.5rem;
-            }
-
-            #home h1 {
-                font-size: 2rem;
-            }
-
-            #home img {
-                width: 120px;
-                height: 120px;
-            }
-
-            /* Text justify for "Sobre" section on mobile */
-            #sobre p {
-                text-align: justify;
-            }
-        }
-
-        /* DESKTOP BREAKPOINT: 1024px and up */
-        @media (min-width: 1024px) {
-            /* Ensure desktop menu is visible on desktop */
-            .desktop-menu {
-                display: flex !important;
-            }
-
-            /* Ensure mobile menu button is hidden on desktop */
-            .mobile-menu-btn {
-                display: none !important;
-            }
-        }
-    </style>
 </head>
-
-<body class="bg-white text-gray-800">
+<body>
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5CVZ2ZNW" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5CVZ2ZNW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Header -->
@@ -574,168 +377,11 @@
         </div>
     </footer>
 
-    <script>
-        // Typing effect for subtitle
-        document.addEventListener('DOMContentLoaded', () => {
-            const subtitleElement = document.getElementById('typing-subtitle');
+<script>
+// Inicialização de traduções
+let translations = <?php echo json_encode(isset($translations) ? ['currentLang' => $translations] : []); ?>;
+</script>
 
-            if (subtitleElement) {
-
-                const text = "Desenvolvedor Web – Drupal, Laravel & Front-end";
-                let charIndex = 0;
-                let isDeleting = false;
-                const typeSpeed = 100;
-                const deleteSpeed = 50;
-                const delayAfterTyping = 2000;
-
-                function typeEffect() {
-                    if (isDeleting) {
-                        if (charIndex > 0) {
-                            subtitleElement.textContent = text.substring(0, charIndex - 1);
-                            charIndex--;
-                            setTimeout(typeEffect, deleteSpeed);
-                        } else {
-                            isDeleting = false;
-                            setTimeout(typeEffect, 500);
-                        }
-                    } else {
-                        if (charIndex < text.length) {
-                            subtitleElement.textContent = text.substring(0, charIndex + 1);
-                            charIndex++;
-                            setTimeout(typeEffect, typeSpeed);
-                        } else {
-                            isDeleting = true;
-                            setTimeout(typeEffect, delayAfterTyping);
-                        }
-                    }
-                }
-                typeEffect();
-            }
-        });
-
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Reading Progress Bar
-        window.addEventListener('scroll', () => {
-            const progressBar = document.getElementById('progressBar');
-            if (progressBar) {
-                const totalHeight = document.documentElement.scrollHeight - document.documentElement
-                    .clientHeight;
-                const progress = (window.scrollY / totalHeight) * 100;
-                progressBar.style.width = progress + '%';
-            }
-        });
-
-        // O código do formulário de contato foi removido pois agora é gerenciado por um serviço externo.
-
-        // =================================================================== 
-        // MOBILE MENU FUNCTIONALITY
-        // ===================================================================
-        
-        // Mobile menu toggle functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileMenuClose = document.getElementById('mobileMenuClose');
-            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
-
-            // Open mobile menu
-            if (mobileMenuBtn) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.add('active');
-                    document.body.style.overflow = 'hidden'; // Prevent body scroll
-                });
-            }
-
-            // Close mobile menu
-            if (mobileMenuClose) {
-                mobileMenuClose.addEventListener('click', () => {
-                    mobileMenu.classList.remove('active');
-                    document.body.style.overflow = 'auto'; // Restore body scroll
-                });
-            }
-
-            // Close menu when clicking on links
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.remove('active');
-                    document.body.style.overflow = 'auto'; // Restore body scroll
-                });
-            });
-
-            // Close menu when clicking outside
-            mobileMenu.addEventListener('click', (e) => {
-                if (e.target === mobileMenu) {
-                    mobileMenu.classList.remove('active');
-                    document.body.style.overflow = 'auto'; // Restore body scroll
-                }
-            });
-        });
-
-        // Testimonial Carousel
-        document.addEventListener('DOMContentLoaded', () => {
-            const track = document.getElementById('testimonial-track');
-            const prevBtn = document.getElementById('prev-btn');
-            const nextBtn = document.getElementById('next-btn');
-
-            if (track) {
-                let currentIndex = 0;
-
-                const getItemsVisible = () => window.innerWidth >= 768 ? 2 : 1;
-                const getTotalItems = () => track.children.length;
-
-                function updateCarousel() {
-                    const itemsVisible = getItemsVisible();
-                    const totalItems = getTotalItems();
-                    const itemWidth = track.parentElement.clientWidth / itemsVisible;
-
-                    const newTransform = -(currentIndex * itemWidth);
-                    track.style.transform = `translateX(${newTransform}px)`;
-
-                    prevBtn.disabled = currentIndex === 0;
-                    nextBtn.disabled = currentIndex >= totalItems - itemsVisible;
-                }
-
-                nextBtn.addEventListener('click', () => {
-                    const itemsVisible = getItemsVisible();
-                    const totalItems = getTotalItems();
-                    if (currentIndex < totalItems - itemsVisible) {
-                        currentIndex++;
-                        updateCarousel();
-                    }
-                });
-
-                prevBtn.addEventListener('click', () => {
-                    if (currentIndex > 0) {
-                        currentIndex--;
-                        updateCarousel();
-                    }
-                });
-
-                window.addEventListener('resize', () => {
-                    // Adjust index if it becomes out of bounds on resize
-                    const itemsVisible = getItemsVisible();
-                    const totalItems = getTotalItems();
-                    if (currentIndex > totalItems - itemsVisible) {
-                        currentIndex = totalItems - itemsVisible;
-                    }
-                    updateCarousel();
-                });
-
-                // Initial setup
-                updateCarousel();
-            }
-        });
-    </script>
-
+<script src="js/script.js"></script>
 </body>
-
 </html>
