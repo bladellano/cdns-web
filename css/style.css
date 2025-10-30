@@ -1,0 +1,187 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+#typing-subtitle::after {
+  content: "|";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* =================================================================== */
+/* RESPONSIVE MENU STYLES */
+/* =================================================================== */
+
+/* Mobile hamburger menu button */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.mobile-menu-btn span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #374151;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Mobile menu overlay */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  padding-top: 60px;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile-menu li {
+  margin: 20px 0;
+}
+
+.mobile-menu a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  transition: color 0.3s;
+}
+
+.mobile-menu a:hover {
+  color: #ea580c;
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* =================================================================== */
+/* BREAKPOINTS */
+/* =================================================================== */
+
+/* TABLET BREAKPOINT: 768px - 1023px */
+@media (max-width: 1023px) and (min-width: 768px) {
+  /* Hide desktop menu and show mobile menu for tablet */
+  .desktop-menu {
+    display: none !important;
+  }
+
+  /* Show mobile menu button for tablet */
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+
+  /* Hide Banner Component Unicorn for tablet */
+  .unicorn-banner {
+    display: none !important;
+  }
+
+  /* Adjust hero section background for tablet */
+  #home {
+    background: #000 !important;
+  }
+
+  /* Adjust header padding for tablet */
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  /* Text justify for "Sobre" section on tablet */
+  #sobre p {
+    text-align: justify;
+  }
+}
+
+/* MOBILE BREAKPOINT: up to 767px */
+@media (max-width: 767px) {
+  /* Hide desktop menu */
+  .desktop-menu {
+    display: none !important;
+  }
+
+  /* Show mobile menu button */
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+
+  /* Adjust header padding for mobile */
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  /* Hide Banner Component Unicorn for mobile */
+  .unicorn-banner {
+    display: none !important;
+  }
+
+  /* Adjust hero section for mobile */
+  #home {
+    background: #000 !important;
+    padding: 3rem 0;
+  }
+
+  /* Adjust hero content for mobile */
+  #home .container {
+    padding: 0 1.5rem;
+  }
+
+  #home h1 {
+    font-size: 2rem;
+  }
+
+  #home img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Text justify for "Sobre" section on mobile */
+  #sobre p {
+    text-align: justify;
+  }
+}
+
+/* DESKTOP BREAKPOINT: 1024px and up */
+@media (min-width: 1024px) {
+  /* Ensure desktop menu is visible on desktop */
+  .desktop-menu {
+    display: flex !important;
+  }
+
+  /* Ensure mobile menu button is hidden on desktop */
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}

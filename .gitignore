@@ -8,3 +8,6 @@ coverage/
 .idea/
 *.log
 *.tmp
+/vendor/
+/composer.lock
+.gemini/
