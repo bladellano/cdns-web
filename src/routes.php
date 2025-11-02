@@ -16,6 +16,24 @@ Flight::route('POST /submit-contact', function() {
   $controller->submitContactForm();
 });
 
+// Drupal Development page route
+Flight::route('/drupal-development', function() {
+    $controller = new CDNS\Site\Controllers\SiteController();
+    $controller->drupalDevelopment();
+});
+
+// Laravel Development page route
+Flight::route('/laravel-development', function() {
+    $controller = new CDNS\Site\Controllers\SiteController();
+    $controller->laravelDevelopment();
+});
+
+// Frontend Development page route
+Flight::route('/frontend-development', function() {
+    $controller = new CDNS\Site\Controllers\SiteController();
+    $controller->frontendDevelopment();
+});
+
 // Language-specific home page route
 Flight::route('/@lang', function($lang) {
     $controller = new CDNS\Site\Controllers\SiteController();
