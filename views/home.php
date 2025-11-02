@@ -1,137 +1,14 @@
-<!DOCTYPE html>
-<html lang="<?php echo isset($currentLang) ? $currentLang : 'pt-BR'; ?>">
-<head>
-
-    <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5CVZ2ZNW');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Desenvolvedor Web especializado em Drupal, Laravel e Front-end. Criando soluções web robustas e elegantes, com foco em performance e na experiência do usuário.">
-    <meta name="keywords" content="Desenvolvimento Web, Drupal, Laravel, Front-end, PHP, JavaScript, CSS, HTML, CDNS Systems">
-    <meta name="author" content="CDNS Systems Ltda">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>">
-    <meta property="og:title" content="CDNS Systems Ltda – Desenvolvimento Web">
-    <meta property="og:description" content="Soluções web robustas e elegantes, com foco em performance e na experiência do usuário.">
-    <meta property="og:image" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]/images/banner-hero.png"; ?>">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>">
-    <meta name="twitter:title" content="CDNS Systems Ltda – Desenvolvimento Web">
-    <meta name="twitter:description" content="Soluções web robustas e elegantes, com foco em performance e na experiência do usuário.">
-    <meta name="twitter:image" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]/images/banner-hero.png"; ?>">
-
-    <title>Desenvolvedor Web – Drupal, Laravel e Front-end</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-</head>
-<body>
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5CVZ2ZNW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="w-full h-1.5 bg-gray-200">
-            <div id="progressBar" class="h-full bg-orange-600" style="width: 0%;"></div>
-        </div>
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <img src="images/cdns-logo.png" alt="CDNS Systems Logo" class="h-8">
-                <span class="font-bold text-gray-800 text-lg">CDNS Systems</span>
-            </div>
-            
-            <!-- Desktop Menu -->
-            <ul class="desktop-menu flex space-x-6">
-                <li><a href="#home" class="text-gray-600 hover:text-blue-500 transition duration-300">Início</a></li>
-                <li><a href="#sobre" class="text-gray-600 hover:text-blue-500 transition duration-300">Sobre</a></li>
-                <li><a href="#servicos" class="text-gray-600 hover:text-blue-500 transition duration-300">Serviços</a>
-                </li>
-                <li><a href="#depoimentos"
-                        class="text-gray-600 hover:text-blue-500 transition duration-300">Depoimentos</a></li>
-                <li><a href="#contato" class="text-gray-600 hover:text-blue-500 transition duration-300">Contato</a>
-                </li>
-            </ul>
-
-            <!-- Mobile Menu Button -->
-            <div class="mobile-menu-btn" id="mobileMenuBtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-
-        <!-- Mobile Menu Overlay -->
-        <div class="mobile-menu" id="mobileMenu">
-            <div class="mobile-menu-close" id="mobileMenuClose">&times;</div>
-            <ul>
-                <li><a href="#home" class="mobile-menu-link">Início</a></li>
-                <li><a href="#sobre" class="mobile-menu-link">Sobre</a></li>
-                <li><a href="#servicos" class="mobile-menu-link">Serviços</a></li>
-                <li><a href="#depoimentos" class="mobile-menu-link">Depoimentos</a></li>
-                <li><a href="#contato" class="mobile-menu-link">Contato</a></li>
-            </ul>
-        </div>
-    </header>
+<?php require_once __DIR__ . '/header.php'; ?>
 
     <!-- Hero Section -->
-    <section id="home" class="relative py-20">
-
-        <!-- Banner Component Unicorn -->
-        <div class="unicorn-banner absolute top-0 left-0 w-full h-full z-0">
-
-            <div data-us-project="Jigop0G5U0ffW0J3ZMxG" style="width:100%; height: 100%"></div>
-            <script type="text/javascript">
-                ! function () {
-                    if (!window.UnicornStudio) {
-                        window.UnicornStudio = {
-                            isInitialized: !1
-                        };
-                        var i = document.createElement("script");
-                        i.src =
-                            "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.33/dist/unicornStudio.umd.js",
-                            i.onload = function () {
-                                window.UnicornStudio.isInitialized || (UnicornStudio.init(), window.UnicornStudio
-                                    .isInitialized = !0)
-                            }, (document.head || document.body).appendChild(i)
-                    }
-                }();
-            </script>
-
+    <section id="home" class="relative py-20 min-h-[600px] flex items-center">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/banner-hero.png" alt="Banner Hero" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90"></div>
         </div>
-        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0, 0, 0, 1) 12%, transparent 0%);"></div>
-        <!-- End/ Banner Component Unicorn -->
 
-        <!-- Gradient Overlay -->
+        <!-- Content -->
         <div class="container mx-auto px-6 text-center relative z-10">
             <img src="images/perfil-home.png" alt="Foto do Desenvolvedor"
                 class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-white shadow-lg">
@@ -197,7 +74,9 @@
                             d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6z"></path>
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h16M8 13h8"></path>
                     </svg>
-                    <h3 class="text-xl font-bold font-poppins mb-2">Desenvolvimento Drupal</h3>
+                    <a href="/drupal-development">
+                        <h3 class="text-xl font-bold font-poppins mb-2 hover:text-orange-600 transition duration-300">Desenvolvimento Drupal</h3>
+                    </a>
                     <p class="text-gray-600">Criação de portais, intranets e sistemas complexos com a flexibilidade do
                         Drupal.</p>
                 </div>
@@ -212,7 +91,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 21a9 9 0 110-18 9 9 0 010 18z"></path>
                     </svg>
-                    <h3 class="text-xl font-bold font-poppins mb-2">Aplicações com Laravel</h3>
+                    <a href="/laravel-development">
+                        <h3 class="text-xl font-bold font-poppins mb-2 hover:text-orange-600 transition duration-300">Aplicações com Laravel</h3>
+                    </a>
                     <p class="text-gray-600">APIs RESTful e sistemas web robustos utilizando o ecossistema poderoso do
                         Laravel.</p>
                 </div>
@@ -225,7 +106,9 @@
                             d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
                         </path>
                     </svg>
-                    <h3 class="text-xl font-bold font-poppins mb-2">Interfaces Front-end</h3>
+                    <a href="/frontend-development">
+                        <h3 class="text-xl font-bold font-poppins mb-2 hover:text-orange-600 transition duration-300">Interfaces Front-end</h3>
+                    </a>
                     <p class="text-gray-600">Design responsivo e interativo com HTML, CSS, e JavaScript moderno
                         (Vue.js/React).</p>
                 </div>
@@ -358,30 +241,4 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
-    <footer class="bg-gray-100 text-black py-8">
-        <div class="container mx-auto px-6 text-center">
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="https://www.linkedin.com/in/bladellano/" target="_blank" rel="noopener noreferrer"
-                    class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-600 transition duration-300">LinkedIn</a>
-                <a href="https://www.instagram.com/_caiodellano_/" target="_blank" rel="noopener noreferrer"
-                    class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-600 transition duration-300">Instagram</a>
-                <a href="https://github.com/bladellano/" target="_blank" rel="noopener noreferrer"
-                    class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-600 transition duration-300">GitHub</a>
-            </div>
-            <div class="text-gray-400 text-sm mt-6 mb-4">
-                <p>Contato: +351 927 860 541</p>
-                <p>Rua Conselheiro Furtado dos Santos, n 73, Moraria, 1 andar. Alvaiázere, Leiria, Portugal</p>
-            </div>
-            <p class="text-gray-500 text-xs">&copy; 2025 CDNS Systems Ltda. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-<script>
-// Inicialização de traduções
-let translations = <?php echo json_encode(isset($translations) ? ['currentLang' => $translations] : []); ?>;
-</script>
-
-<script src="js/script.js"></script>
-</body>
-</html>
+<?php require_once __DIR__ . '/footer.php'; ?>

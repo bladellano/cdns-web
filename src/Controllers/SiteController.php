@@ -41,6 +41,36 @@ class SiteController
   }
 
   /**
+   * Display the Drupal Development page
+   *
+   * @return void
+   */
+  public function drupalDevelopment()
+  {
+    Flight::render('drupal-development');
+  }
+
+  /**
+   * Display the Laravel Development page
+   *
+   * @return void
+   */
+  public function laravelDevelopment()
+  {
+    Flight::render('laravel-development');
+  }
+
+  /**
+   * Display the Frontend Development page
+   *
+   * @return void
+   */
+  public function frontendDevelopment()
+  {
+    Flight::render('frontend-development');
+  }
+
+  /**
    * Handle contact form submission
    *
    * @return void
