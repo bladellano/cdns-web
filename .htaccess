@@ -14,10 +14,7 @@
 </FilesMatch>
 
 # 3. PROTEGER DIRETÓRIO DE LOGS
-<DirectoryMatch "logs">
-    Order allow,deny
-    Deny from all
-</DirectoryMatch>
+# A diretiva <DirectoryMatch> foi removida e a regra movida para mod_rewrite abaixo.
 
 # 4. PREVENIR LISTAGEM DE DIRETÓRIOS
 Options -Indexes
@@ -26,6 +23,9 @@ Options -Indexes
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
+
+    # Proteger diretório de logs
+    RewriteRule ^logs(/|$) - [F,L]
 
     # Se o arquivo ou diretório existe, serve diretamente
     RewriteCond %{REQUEST_FILENAME} !-f
