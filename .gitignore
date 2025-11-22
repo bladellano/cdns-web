@@ -9,5 +9,4 @@ coverage/
 *.log
 *.tmp
 /vendor/
-/composer.lock
 .gemini/
