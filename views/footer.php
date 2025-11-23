@@ -22,6 +22,9 @@
 let translations = <?php echo json_encode(isset($translations) ? ['currentLang' => $translations] : []); ?>;
 </script>
 
+<script src="<?php echo $chatWhatsappUrl; ?>/socket.io/socket.io.js"></script>
+<script src="<?php echo $chatWhatsappUrl; ?>/widget.js"></script>
+
 <script src="js/script.js"></script>
 </body>
 </html>
