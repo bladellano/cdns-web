@@ -1,19 +1,19 @@
     <!-- Rodapé -->
-    <footer class="bg-gray-100 text-black py-8">
+    <footer class="bg-secondary text-white py-8">
         <div class="container mx-auto px-6 text-center">
             <div class="flex justify-center space-x-6 mb-4">
                 <a href="https://www.linkedin.com/in/bladellano/" target="_blank" rel="noopener noreferrer"
-                    class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-600 transition duration-300">LinkedIn</a>
+                    class="bg-primary text-secondary px-4 py-2 rounded-full hover:bg-primary-dark transition duration-300 font-medium">LinkedIn</a>
                 <a href="https://www.instagram.com/_caiodellano_/" target="_blank" rel="noopener noreferrer"
-                    class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-600 transition duration-300">Instagram</a>
+                    class="bg-primary text-secondary px-4 py-2 rounded-full hover:bg-primary-dark transition duration-300 font-medium">Instagram</a>
                 <a href="https://github.com/bladellano/" target="_blank" rel="noopener noreferrer"
-                    class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-600 transition duration-300">GitHub</a>
+                    class="bg-primary text-secondary px-4 py-2 rounded-full hover:bg-primary-dark transition duration-300 font-medium">GitHub</a>
             </div>
-            <div class="text-gray-400 text-sm mt-6 mb-4">
+            <div class="text-gray-300 text-sm mt-6 mb-4">
                 <p>Contato: +351 927 860 541</p>
                 <p>Rua Conselheiro Furtado dos Santos, n 73, Moraria, 1 andar. Alvaiázere, Leiria, Portugal</p>
             </div>
-            <p class="text-gray-500 text-xs">&copy; 2025 CDNS Systems Ltda. Todos os direitos reservados.</p>
+            <p class="text-gray-400 text-xs">&copy; 2025 CDNS Systems Ltda. Todos os direitos reservados.</p>
         </div>
     </footer>
 
