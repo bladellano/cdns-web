@@ -1,39 +1,6 @@
-// Typing effect for subtitle
+// Typing effect removed - no longer needed in optimized hero section
 document.addEventListener('DOMContentLoaded', () => {
-  const subtitleElement = document.getElementById('typing-subtitle');
-
-  if (subtitleElement) {
-
-    const text = "Desenvolvedor Web – Drupal, Laravel & Front-end";
-    let charIndex = 0;
-    let isDeleting = false;
-    const typeSpeed = 100;
-    const deleteSpeed = 50;
-    const delayAfterTyping = 2000;
-
-    function typeEffect() {
-      if (isDeleting) {
-        if (charIndex > 0) {
-          subtitleElement.textContent = text.substring(0, charIndex - 1);
-          charIndex--;
-          setTimeout(typeEffect, deleteSpeed);
-        } else {
-          isDeleting = false;
-          setTimeout(typeEffect, 500);
-        }
-      } else {
-        if (charIndex < text.length) {
-          subtitleElement.textContent = text.substring(0, charIndex + 1);
-          charIndex++;
-          setTimeout(typeEffect, typeSpeed);
-        } else {
-          isDeleting = true;
-          setTimeout(typeEffect, delayAfterTyping);
-        }
-      }
-    }
-    typeEffect();
-  }
+  // Script mantido para compatibilidade, mas efeito de digitação removido
 });
 
 // Smooth scroll for navigation
@@ -112,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (track) {
     let currentIndex = 0;
 
-    const getItemsVisible = () => window.innerWidth >= 768 ? 2 : 1;
+    const getItemsVisible = () => window.innerWidth >= 768 ? 3 : 1;
     const getTotalItems = () => track.children.length;
 
     function updateCarousel() {

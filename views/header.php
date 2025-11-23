@@ -62,7 +62,7 @@
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="w-full h-1.5 bg-gray-200">
-            <div id="progressBar" class="h-full bg-orange-600" style="width: 0%;"></div>
+            <div id="progressBar" class="h-full bg-primary" style="width: 0%;"></div>
         </div>
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
@@ -74,21 +74,21 @@
             <ul class="desktop-menu flex space-x-6">
                 <li><a 
                   href="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]"; ?>#home" 
-                  class="text-gray-600 hover:text-blue-500 transition duration-300">Início</a>
+                  class="text-secondary hover:text-primary transition duration-300">Início</a>
                 </li>
                 <li><a 
                   href="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]"; ?>#sobre" 
-                  class="text-gray-600 hover:text-blue-500 transition duration-300">Sobre</a>
+                  class="text-secondary hover:text-primary transition duration-300">Sobre</a>
                 </li>
                 <li>
-                  <a href="#servicos" class="text-gray-600 hover:text-blue-500 transition duration-300">Serviços</a>
+                  <a href="#servicos" class="text-secondary hover:text-primary transition duration-300">Serviços</a>
                 </li>
                 <li><a 
                   href="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]"; ?>#depoimentos"
-                  class="text-gray-600 hover:text-blue-500 transition duration-300">Depoimentos</a>
+                  class="text-secondary hover:text-primary transition duration-300">Depoimentos</a>
                 </li>
                 <li>
-                  <a href="#contato" class="text-gray-600 hover:text-blue-500 transition duration-300">Contato</a>
+                  <a href="#contato" class="text-secondary hover:text-primary transition duration-300">Contato</a>
                 </li>
             </ul>
 
