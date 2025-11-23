@@ -37,6 +37,7 @@ class SiteController
     Flight::view()->set('translations', $translations);
     Flight::view()->set('currentLang', $lang);
     Flight::view()->set('successMessage', $successMessage);
+    Flight::view()->set('chatWhatsappUrl', getenv('CHAT_WHATSAPP_URL'));
     Flight::render('home');
   }
 
