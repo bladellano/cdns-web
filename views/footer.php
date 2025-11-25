@@ -10,10 +10,10 @@
                     class="bg-primary text-secondary px-4 py-2 rounded-full hover:bg-primary-dark transition duration-300 font-medium">GitHub</a>
             </div>
             <div class="text-gray-300 text-sm mt-6 mb-4">
-                <p>Contato: +351 927 860 541</p>
-                <p>Rua Conselheiro Furtado dos Santos, n 73, Moraria, 1 andar. Alvaiázere, Leiria, Portugal</p>
+                <p><?php echo $translations['footer.address'] ?? 'Contato: +351 927 860 541'; ?></p>
+                <p><?php echo $translations['footer.location'] ?? 'Rua Conselheiro Furtado dos Santos, n 73, Moraria, 1 andar. Alvaiázere, Leiria, Portugal'; ?></p>
             </div>
-            <p class="text-gray-400 text-xs">&copy; 2025 CDNS Systems Ltda. Todos os direitos reservados.</p>
+            <p class="text-gray-400 text-xs"><?php echo $translations['footer.text'] ?? '© 2025 CDNS Systems Ltda. Todos os direitos reservados.'; ?></p>
         </div>
     </footer>
 

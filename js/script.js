@@ -70,6 +70,33 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// =================================================================== 
+// LANGUAGE DROPDOWN
+// ===================================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+  const langBtn = document.getElementById('langBtn');
+  const langDropdown = document.getElementById('langDropdown');
+
+  if (langBtn && langDropdown) {
+    // Toggle dropdown
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langDropdown.classList.toggle('hidden');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', () => {
+      langDropdown.classList.add('hidden');
+    });
+
+    // Prevent closing when clicking inside dropdown
+    langDropdown.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+});
+
 // Testimonial Carousel
 document.addEventListener('DOMContentLoaded', () => {
   const track = document.getElementById('testimonial-track');

@@ -102,6 +102,40 @@ header .font-bold {
   width: 100%;
 }
 
+/* Language Selector */
+.lang-selector {
+  position: relative;
+}
+
+.lang-selector button {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.lang-selector button:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+#langDropdown {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Progress Bar */
 #progressBar {
   background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
