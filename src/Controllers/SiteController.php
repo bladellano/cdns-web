@@ -48,6 +48,9 @@ class SiteController
    */
   public function drupalDevelopment()
   {
+    // Set required variables for header/footer
+    Flight::view()->set('currentLang', 'pt-BR');
+    Flight::view()->set('chatWhatsappUrl', getenv('CHAT_WHATSAPP_URL'));
     Flight::render('drupal-development');
   }
 
@@ -58,6 +61,9 @@ class SiteController
    */
   public function laravelDevelopment()
   {
+    // Set required variables for header/footer
+    Flight::view()->set('currentLang', 'pt-BR');
+    Flight::view()->set('chatWhatsappUrl', getenv('CHAT_WHATSAPP_URL'));
     Flight::render('laravel-development');
   }
 
@@ -68,6 +74,9 @@ class SiteController
    */
   public function frontendDevelopment()
   {
+    // Set required variables for header/footer
+    Flight::view()->set('currentLang', 'pt-BR');
+    Flight::view()->set('chatWhatsappUrl', getenv('CHAT_WHATSAPP_URL'));
     Flight::render('frontend-development');
   }
 
