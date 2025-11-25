@@ -16,8 +16,8 @@ class SiteController
    */
   public function index($lang = 'en')
   {
-    // Validate language
-    $validLanguages = ['pt', 'es', 'en', 'fr'];
+    // Validate language - only EN and PT are supported
+    $validLanguages = ['pt', 'en'];
     if (!in_array($lang, $validLanguages)) {
       $lang = 'en'; // Default to English if invalid language
     }

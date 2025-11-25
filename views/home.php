@@ -15,19 +15,18 @@
                 <!-- Badge -->
                 <div class="hero-badge inline-flex items-center gap-2 mb-6">
                     <span class="badge-dot"></span>
-                    <span class="badge-text">Especialistas em Desenvolvimento Web</span>
+                    <span class="badge-text"><?php echo $translations['hero.badge'] ?? 'Especialistas em Desenvolvimento Web'; ?></span>
                 </div>
 
                 <!-- Main Headline -->
                 <h1 class="hero-title text-5xl md:text-6xl lg:text-7xl font-bold font-poppins text-white leading-tight mb-6">
-                    Transformamos Suas Ideias em 
-                    <span class="hero-highlight">Soluções Digitais</span> de Alto Impacto
+                    <?php echo $translations['hero.title.line1'] ?? 'Transformamos Suas Ideias em'; ?> 
+                    <span class="hero-highlight"><?php echo $translations['hero.title.highlight'] ?? 'Soluções Digitais'; ?></span><?php if (!empty($translations['hero.title.line2'])): ?> <?php echo $translations['hero.title.line2']; ?><?php endif; ?>
                 </h1>
 
                 <!-- Subtitle -->
                 <p class="hero-subtitle text-xl md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto">
-                    Desenvolvimento web sob medida com <strong>Drupal, Laravel e tecnologias modernas</strong> — 
-                    entregando performance, escalabilidade e resultados concretos para seu negócio.
+                    <?php echo $translations['hero.subtitle'] ?? 'Desenvolvimento web sob medida com <strong>Drupal, Laravel e tecnologias modernas</strong> — entregando performance, escalabilidade e resultados concretos para seu negócio.'; ?>
                 </p>
 
                 <!-- Social Proof Mini -->
@@ -36,32 +35,32 @@
                         <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                         </svg>
-                        <span class="text-sm font-medium">+8 Anos de Experiência</span>
+                        <span class="text-sm font-medium"><?php echo $translations['hero.social_proof.experience'] ?? '+8 Anos de Experiência'; ?></span>
                     </div>
                     <div class="flex items-center gap-2">
                         <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
                         </svg>
-                        <span class="text-sm font-medium">Clientes como FIESC, Unicef, Riachuelo</span>
+                        <span class="text-sm font-medium"><?php echo $translations['hero.social_proof.clients'] ?? 'Clientes como FIESC, Unicef, Riachuelo'; ?></span>
                     </div>
                     <div class="flex items-center gap-2">
                         <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                         </svg>
-                        <span class="text-sm font-medium">Código Limpo & Documentado</span>
+                        <span class="text-sm font-medium"><?php echo $translations['hero.social_proof.code'] ?? 'Código Limpo & Documentado'; ?></span>
                     </div>
                 </div>
 
                 <!-- CTA Buttons -->
                 <div class="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="#contato" class="cta-primary group">
-                        <span>Transforme Sua Ideia em Realidade</span>
+                        <span><?php echo $translations['hero.cta.primary'] ?? 'Transforme Sua Ideia em Realidade'; ?></span>
                         <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                         </svg>
                     </a>
                     <a href="#servicos" class="cta-secondary">
-                        Ver Serviços
+                        <?php echo $translations['hero.cta.secondary'] ?? 'Ver Serviços'; ?>
                     </a>
                 </div>
 
@@ -86,32 +85,25 @@
             
             <!-- Conteúdo -->
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-4xl font-bold font-poppins mb-6 text-center text-secondary">Sobre Mim</h2>
+                <h2 class="text-4xl font-bold font-poppins mb-6 text-center text-secondary"><?php echo $translations['about.title'] ?? 'Sobre Mim'; ?></h2>
                 <div class="about-content">
                     <p class="text-gray-600 mb-4">
-                        Com mais de <strong class="text-primary">8 anos de experiência</strong>, minha paixão é transformar ideias em código limpo e funcional.
-                        Sou especialista em <strong class="text-secondary">Drupal</strong> para sistemas de gerenciamento de conteúdo complexos e <strong class="text-secondary">Laravel</strong> para
-                        aplicações back-end customizadas. Embora meu foco principal seja nessas tecnologias, também atuo com
-                        Vue, PostgreSQL, MySQL, JavaScript, jQuery, Cypress e na implementação de APIs complexas.
+                        <?php echo $translations['about.text1'] ?? 'Com mais de <strong class="text-primary">8 anos de experiência</strong>, minha paixão é transformar ideias em código limpo e funcional...'; ?>
                     </p>
                     <p class="text-gray-600 mb-4">
-                        Sou formado em <strong class="text-secondary">Sistemas de Informação</strong> com especialização em <strong class="text-secondary">Engenharia de Software</strong>, o que me
-                        proporciona uma base sólida para arquitetar e construir soluções robustas e escaláveis.
+                        <?php echo $translations['about.text2'] ?? 'Sou formado em <strong class="text-secondary">Sistemas de Informação</strong> com especialização em <strong class="text-secondary">Engenharia de Software</strong>...'; ?>
                     </p>
                     <p class="text-gray-600 mb-4">
-                        Minha filosofia de trabalho é centrada na clareza e na qualidade. Acredito que uma documentação
-                        bem-feita e requisitos bem definidos são a base para o sucesso de qualquer projeto, sendo uma regra
-                        indispensável para mim.
+                        <?php echo $translations['about.text3'] ?? 'Minha filosofia de trabalho é centrada na clareza e na qualidade...'; ?>
                     </p>
                     <p class="text-gray-600 mb-4">
-                        Busco sempre o equilíbrio entre design e funcionalidade, garantindo que cada projeto seja não apenas
-                        bonito, mas também intuitivo e acessível.
+                        <?php echo $translations['about.text4'] ?? 'Busco sempre o equilíbrio entre design e funcionalidade...'; ?>
                     </p>
                     
                     <!-- Clientes Destaque -->
                     <div class="about-clients mt-8 p-6 bg-white rounded-xl border-2 border-gray-100">
                         <p class="text-center text-gray-600 mb-3">
-                            <span class="text-secondary font-semibold">Projetos de Destaque com:</span>
+                            <span class="text-secondary font-semibold"><?php echo $translations['about.clients.title'] ?? 'Projetos de Destaque com:'; ?></span>
                         </p>
                         <div class="flex flex-wrap justify-center gap-4">
                             <span class="client-badge">FIESC</span>
@@ -129,7 +121,7 @@
     <!-- Serviços -->
     <section id="servicos" class="bg-secondary py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold font-poppins text-center mb-12 text-white">Serviços</h2>
+            <h2 class="text-3xl font-bold font-poppins text-center mb-12 text-white"><?php echo $translations['services.title'] ?? 'Serviços'; ?></h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Serviço 1 -->
                 <div
@@ -141,10 +133,9 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 9h16M8 13h8"></path>
                     </svg>
                     <a href="/drupal-development">
-                        <h3 class="text-xl font-bold font-poppins mb-2 hover:text-primary transition duration-300">Desenvolvimento Drupal</h3>
+                        <h3 class="text-xl font-bold font-poppins mb-2 hover:text-primary transition duration-300"><?php echo $translations['services.drupal.title'] ?? 'Desenvolvimento Drupal'; ?></h3>
                     </a>
-                    <p class="text-gray-600">Criação de portais, intranets e sistemas complexos com a flexibilidade do
-                        Drupal.</p>
+                    <p class="text-gray-600"><?php echo $translations['services.drupal.desc'] ?? 'Criação de portais, intranets e sistemas complexos com a flexibilidade do Drupal.'; ?></p>
                 </div>
                 <!-- Serviço 2 -->
                 <div
@@ -158,10 +149,9 @@
                             d="M12 21a9 9 0 110-18 9 9 0 010 18z"></path>
                     </svg>
                     <a href="/laravel-development">
-                        <h3 class="text-xl font-bold font-poppins mb-2 hover:text-primary transition duration-300">Aplicações com Laravel</h3>
+                        <h3 class="text-xl font-bold font-poppins mb-2 hover:text-primary transition duration-300"><?php echo $translations['services.laravel.title'] ?? 'Aplicações com Laravel'; ?></h3>
                     </a>
-                    <p class="text-gray-600">APIs RESTful e sistemas web robustos utilizando o ecossistema poderoso do
-                        Laravel.</p>
+                    <p class="text-gray-600"><?php echo $translations['services.laravel.desc'] ?? 'APIs RESTful e sistemas web robustos utilizando o ecossistema poderoso do Laravel.'; ?></p>
                 </div>
                 <!-- Serviço 3 -->
                 <div
@@ -173,10 +163,9 @@
                         </path>
                     </svg>
                     <a href="/frontend-development">
-                        <h3 class="text-xl font-bold font-poppins mb-2 hover:text-primary transition duration-300">Interfaces Front-end</h3>
+                        <h3 class="text-xl font-bold font-poppins mb-2 hover:text-primary transition duration-300"><?php echo $translations['services.frontend.title'] ?? 'Interfaces Front-end'; ?></h3>
                     </a>
-                    <p class="text-gray-600">Design responsivo e interativo com HTML, CSS, e JavaScript moderno
-                        (Vue.js/React).</p>
+                    <p class="text-gray-600"><?php echo $translations['services.frontend.desc'] ?? 'Design responsivo e interativo com HTML, CSS, e JavaScript moderno (Vue.js/React).'; ?></p>
                 </div>
             </div>
         </div>
@@ -185,7 +174,7 @@
     <!-- Depoimentos -->
     <section id="depoimentos" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold font-poppins text-center mb-12 text-secondary">Depoimentos</h2>
+            <h2 class="text-3xl font-bold font-poppins text-center mb-12 text-secondary"><?php echo $translations['testimonials.title'] ?? 'Depoimentos'; ?></h2>
             <div class="relative max-w-6xl mx-auto">
                 <div class="overflow-hidden">
                     <div id="testimonial-track" class="flex transition-transform duration-500 ease-in-out">
@@ -298,23 +287,23 @@
     <!-- Contato -->
     <section id="contato" class="bg-secondary py-20">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold font-poppins text-center mb-12 text-white">Entre em Contato</h2>
+            <h2 class="text-3xl font-bold font-poppins text-center mb-12 text-white"><?php echo $translations['contact.title'] ?? 'Entre em Contato'; ?></h2>
             <div class="max-w-2xl mx-auto bg-secondary-dark p-8 rounded-lg shadow-md">
                 <form action="https://formspree.io/f/xgvnpwbr" method="POST">
                     <div class="mb-4">
-                        <label for="name" class="block text-gray-200 font-bold mb-2">Nome</label>
+                        <label for="name" class="block text-gray-200 font-bold mb-2"><?php echo $translations['contact.name'] ?? 'Nome'; ?></label>
                         <input type="text" id="name" name="name"
                             class="w-full px-3 py-2 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                             required>
                     </div>
                     <div class="mb-4">
-                        <label for="email" class="block text-gray-200 font-bold mb-2">Email</label>
+                        <label for="email" class="block text-gray-200 font-bold mb-2"><?php echo $translations['contact.email'] ?? 'Email'; ?></label>
                         <input type="email" id="email" name="email"
                             class="w-full px-3 py-2 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                             required>
                     </div>
                     <div class="mb-4">
-                        <label for="message" class="block text-gray-200 font-bold mb-2">Mensagem</label>
+                        <label for="message" class="block text-gray-200 font-bold mb-2"><?php echo $translations['contact.message'] ?? 'Mensagem'; ?></label>
                         <textarea id="message" name="message" rows="4"
                             class="w-full px-3 py-2 border border-gray-700 bg-gray-800 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                             required></textarea>
@@ -322,7 +311,7 @@
                     <div class="text-center">
                         <button type="submit"
                             class="bg-primary text-secondary font-bold py-3 px-8 rounded-lg hover:bg-primary-dark transition duration-300 shadow-lg hover:shadow-xl">
-                            Enviar Mensagem
+                            <?php echo $translations['contact.submit'] ?? 'Enviar Mensagem'; ?>
                         </button>
                     </div>
                 </form>
