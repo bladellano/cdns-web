@@ -79,7 +79,7 @@
             <!-- Avatar Centralizado -->
             <div class="flex justify-center mb-12">
                 <div class="about-avatar-container">
-                    <img src="https://media.licdn.com/dms/image/v2/D5603AQFqrekfrz17wA/profile-displayphoto-scale_200_200/B56ZqnI.s0G0AY-/0/1763740741048?e=1765411200&v=beta&t=3F5hCku09G4GaBCxTJpb-QPy2dzggJ2iMRmAGi-1vDQ" alt="Foto de Perfil" class="about-avatar">
+                    <img src="/images/caio-amarelo.png" alt="Foto de Perfil" class="about-avatar">
                     <div class="about-avatar-ring"></div>
                 </div>
             </div>
@@ -193,7 +193,7 @@
                         <div class="testimonial-item w-full md:w-1/3 flex-shrink-0 px-3">
                             <div class="testimonial-card bg-white border-2 border-gray-100 p-6 rounded-xl h-full flex flex-col hover:border-primary transition-all duration-300 hover:shadow-xl">
                                 <div class="flex items-center mb-4">
-                                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQFp5jNEvroHNA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1695837024247?e=1765411200&v=beta&t=f0tm1f7oho7L0Xt_z-LeHlsOxWEnFmfsMoflPh8RKXg" alt="Foto de Perfil" class="testimonial-avatar w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-xl mr-4">
+                                    <img src="/images/flavio.jpg" alt="Foto de Perfil" class="testimonial-avatar w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-xl mr-4">
                                     <div>
                                         <p class="font-bold text-secondary">Flávio Salgado</p>
                                         <p class="text-sm text-gray-500">Engenheiro da Computação</p>
@@ -213,7 +213,7 @@
                         <div class="testimonial-item w-full md:w-1/3 flex-shrink-0 px-3">
                             <div class="testimonial-card bg-white border-2 border-gray-100 p-6 rounded-xl h-full flex flex-col hover:border-primary transition-all duration-300 hover:shadow-xl">
                                 <div class="flex items-center mb-4">
-                                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQGO3yaPMcUC0g/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1696093012880?e=1765411200&v=beta&t=u56hgFDuMA_IEbSuVSWAtSvN-T5C6-9ZUgkNG_I9Exg" alt="Foto de Perfil" class="testimonial-avatar w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-xl mr-4">
+                                    <img src="/images/italo.jpg" alt="Foto de Perfil" class="testimonial-avatar w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-xl mr-4">
                                     <div>
                                         <p class="font-bold text-secondary">Ítalo Costa</p>
                                         <p class="text-sm text-gray-500">Desenvolvedor Full-Stack (PHP, JS, SQL)</p>
@@ -233,7 +233,7 @@
                         <div class="testimonial-item w-full md:w-1/3 flex-shrink-0 px-3">
                             <div class="testimonial-card bg-white border-2 border-gray-100 p-6 rounded-xl h-full flex flex-col hover:border-primary transition-all duration-300 hover:shadow-xl">
                                 <div class="flex items-center mb-4">
-                                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQEi4KUPVNE97A/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1724522989074?e=1765411200&v=beta&t=muRfRZTfZHDOcFb2Qo4_PF-iJXXRtCCjNHvEfk47vVw" alt="Foto de Perfil" class="testimonial-avatar w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-xl mr-4">
+                                    <img src="/images/cleice.jpg" alt="Foto de Perfil" class="testimonial-avatar w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-xl mr-4">
                                     <div>
                                         <p class="font-bold text-secondary">Cleice Souza</p>
                                         <p class="text-sm text-gray-500">Analista de Teste | Quality Assurance</p>
@@ -250,6 +250,7 @@
                             </div>
                         </div>
                         <!-- Depoimento 4 -->
+                        <!--  
                         <div class="testimonial-item w-full md:w-1/3 flex-shrink-0 px-3">
                             <div class="testimonial-card bg-white border-2 border-gray-100 p-6 rounded-xl h-full flex flex-col hover:border-primary transition-all duration-300 hover:shadow-xl">
                                 <div class="flex items-center mb-4">
@@ -270,51 +271,8 @@
                                 </div>
                                 <p class="text-gray-600 italic flex-grow">"Ficamos muito satisfeitos com a solução de e-commerce desenvolvida. A plataforma é robusta, escalável e fácil de gerenciar. Excelente parceria!"</p>
                             </div>
-                        </div>
-                        <!-- Depoimento 5 -->
-                        <div class="testimonial-item w-full md:w-1/3 flex-shrink-0 px-3">
-                            <div class="testimonial-card bg-white border-2 border-gray-100 p-6 rounded-xl h-full flex flex-col hover:border-primary transition-all duration-300 hover:shadow-xl">
-                                <div class="flex items-center mb-4">
-                                    <div class="testimonial-avatar w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-xl mr-4">
-                                        JL
-                                    </div>
-                                    <div>
-                                        <p class="font-bold text-secondary">Juliana Lima</p>
-                                        <p class="text-sm text-gray-500">Diretora de TI da GlobalNet</p>
-                                    </div>
-                                </div>
-                                <div class="flex mb-3">
-                                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                </div>
-                                <p class="text-gray-600 italic flex-grow">"A migração do nosso sistema legado foi executada com perfeição. A CDNS Systems garantiu uma transição suave, sem impacto para os nossos usuários."</p>
-                            </div>
-                        </div>
-                        <!-- Depoimento 6 -->
-                        <div class="testimonial-item w-full md:w-1/3 flex-shrink-0 px-3">
-                            <div class="testimonial-card bg-white border-2 border-gray-100 p-6 rounded-xl h-full flex flex-col hover:border-primary transition-all duration-300 hover:shadow-xl">
-                                <div class="flex items-center mb-4">
-                                    <div class="testimonial-avatar w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-xl mr-4">
-                                        RM
-                                    </div>
-                                    <div>
-                                        <p class="font-bold text-secondary">Ricardo Mendes</p>
-                                        <p class="text-sm text-gray-500">Coordenador da LogiMax</p>
-                                    </div>
-                                </div>
-                                <div class="flex mb-3">
-                                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                                </div>
-                                <p class="text-gray-600 italic flex-grow">"O suporte técnico é ágil e eficiente. Sempre que precisamos, a equipe da CDNS nos atende com rapidez e resolve os problemas de forma definitiva."</p>
-                            </div>
-                        </div>
+                        </div> -->
+                    
                     </div>
                 </div>
                 <!-- Carousel Controls -->
