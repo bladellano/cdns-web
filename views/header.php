@@ -65,11 +65,12 @@
             <div id="progressBar" class="h-full bg-primary" style="width: 0%;"></div>
         </div>
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <img src="images/cdns-logo.png" alt="CDNS Systems Logo" class="h-8">
+            <a 
+                class="flex items-center space-x-2"
+                href="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]"; ?>#home">
+                <img src="images/cdns-logo.png" alt="CDNS Systems Logo" class="h-8 ">
                 <span class="font-bold text-gray-800 text-lg">CDNS Systems</span>
-            </div>
-            
+            </a>
             <!-- Desktop Menu -->
             <ul class="desktop-menu flex space-x-6">
                 <li><a 
