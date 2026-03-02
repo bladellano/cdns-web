@@ -28,10 +28,10 @@ let translations = <?php echo json_encode(isset($translations) ? ['currentLang' 
 <script>
     window.nyxChatConfig = {
         serverUrl: 'https://cdns-systems-cdns-chat-widget.ccuexx.easypanel.host',
-        webhookId: '1cbfd071-ae39-4cc6-bd3c-d419af6a761c',
+        webhookId: 'd62195ac-2809-493b-a2bb-05df2c261394',
         position: 'bottom-right',
         primaryColor: '#1b901d',
-        botName: 'Nina IA',
+        botName: 'Nina',
         welcomeMessage: 'Oi! 👋 Sou a Nina, sua assistente virtual. Como posso ajudar?',
         placeholder: 'Pergunte-me qualquer coisa...',
         buttonIcon: '🤖'
