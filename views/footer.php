@@ -22,8 +22,23 @@
 let translations = <?php echo json_encode(isset($translations) ? ['currentLang' => $translations] : []); ?>;
 </script>
 
-<script src="<?php echo $chatWhatsappUrl; ?>/socket.io/socket.io.js"></script>
-<script src="<?php echo $chatWhatsappUrl; ?>/widget.js"></script>
+<!--<script src="<?php echo $chatWhatsappUrl; ?>/socket.io/socket.io.js"></script>-->
+<!--<script src="<?php echo $chatWhatsappUrl; ?>/widget.js"></script>-->
+
+<script>
+    window.nyxChatConfig = {
+        serverUrl: 'https://cdns-systems-cdns-chat-widget.ccuexx.easypanel.host',
+        webhookId: '1cbfd071-ae39-4cc6-bd3c-d419af6a761c',
+        position: 'bottom-right',
+        primaryColor: '#1b901d',
+        botName: 'Nina IA',
+        welcomeMessage: 'Oi! 👋 Sou a Nina, sua assistente virtual. Como posso ajudar?',
+        placeholder: 'Pergunte-me qualquer coisa...',
+        buttonIcon: '🤖'
+    };
+</script>
+<script src="https://cdns-systems-cdns-chat-widget.ccuexx.easypanel.host/socket.io/socket.io.js"></script>
+<script src="https://cdns-systems-cdns-chat-widget.ccuexx.easypanel.host/widget.js"></script>
 
 <script src="js/script.js"></script>
 </body>
