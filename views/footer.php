@@ -26,7 +26,7 @@ let translations = <?php echo json_encode(isset($translations) ? ['currentLang' 
 <!--<script src="<?php echo $chatWhatsappUrl; ?>/widget.js"></script>-->
 
 <script>
-    window.nyxChatConfig = {
+    window.CdnsChatConfig = {
         serverUrl: 'https://cdns-systems-cdns-chat-widget.ccuexx.easypanel.host',
         webhookId: 'd62195ac-2809-493b-a2bb-05df2c261394',
         position: 'bottom-right',
