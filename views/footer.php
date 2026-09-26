@@ -14,6 +14,11 @@
                 <p><?php echo $translations['footer.location'] ?? 'Rua Conselheiro Furtado dos Santos, n 73, Moraria, 1 andar. Alvaiázere, Leiria, Portugal'; ?></p>
             </div>
             <p class="text-gray-400 text-xs"><?php echo $translations['footer.text'] ?? '© 2025 CDNS Systems Ltda. Todos os direitos reservados.'; ?></p>
+            <p class="mt-2">
+                <a href="/privacy-policy" class="text-gray-500 hover:text-primary text-xs transition duration-300">Política de Privacidade</a>
+                <span class="text-gray-600 mx-2 text-xs">·</span>
+                <a href="/terms-of-service" class="text-gray-500 hover:text-primary text-xs transition duration-300">Termos de Serviço</a>
+            </p>
         </div>
     </footer>
 

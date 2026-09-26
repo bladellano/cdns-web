@@ -81,6 +81,30 @@ class SiteController
   }
 
   /**
+   * Display the Privacy Policy page
+   *
+   * @return void
+   */
+  public function privacyPolicy()
+  {
+    Flight::view()->set('currentLang', 'pt-BR');
+    Flight::view()->set('chatWhatsappUrl', getenv('CHAT_WHATSAPP_URL'));
+    Flight::render('privacy-policy');
+  }
+
+  /**
+   * Display the Terms of Service page
+   *
+   * @return void
+   */
+  public function termsOfService()
+  {
+    Flight::view()->set('currentLang', 'pt-BR');
+    Flight::view()->set('chatWhatsappUrl', getenv('CHAT_WHATSAPP_URL'));
+    Flight::render('terms-of-service');
+  }
+
+  /**
    * Handle contact form submission
    *
    * @return void

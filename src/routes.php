@@ -34,6 +34,18 @@ Flight::route('/frontend-development', function() {
     $controller->frontendDevelopment();
 });
 
+// Privacy Policy page route
+Flight::route('/privacy-policy', function() {
+    $controller = new CDNS\Site\Controllers\SiteController();
+    $controller->privacyPolicy();
+});
+
+// Terms of Service page route
+Flight::route('/terms-of-service', function() {
+    $controller = new CDNS\Site\Controllers\SiteController();
+    $controller->termsOfService();
+});
+
 // Language-specific home page route
 Flight::route('/@lang', function($lang) {
     $controller = new CDNS\Site\Controllers\SiteController();
