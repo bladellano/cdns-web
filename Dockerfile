@@ -18,8 +18,24 @@ RUN apt-get update && apt-get install -y \
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+# Force IPv4: many VPS hosts blackhole IPv6 and Composer aborts after a 10s connect timeout.
+ENV COMPOSER_ALLOW_SUPERUSER=1 \
+    COMPOSER_IPRESOLVE=4
+
 COPY composer.json composer.lock ./
-RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
+RUN set -eux; \
+    ok=0; \
+    for i in 1 2 3; do \
+      if composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist; then \
+        ok=1; \
+        break; \
+      fi; \
+      echo "composer dist attempt ${i} failed, retrying..."; \
+      sleep 5; \
+    done; \
+    if [ "$ok" != 1 ]; then \
+      composer install --no-dev --optimize-autoloader --no-interaction --prefer-source; \
+    fi
 
 COPY . .
 
